@@ -1,5 +1,5 @@
 import streamlit as st
-from langchain_core.messages import HumanMessage,AIMessage
+from langchain_core.messages import HumanMessage,AIMessage,ToolMessage
 import json
 
 
@@ -39,3 +39,4 @@ class DisplayResultStreamlit:
                 elif type(message)==AIMessage and message.content:
                     with st.chat_message("assistant"):
                         st.write(message.content)
+             
